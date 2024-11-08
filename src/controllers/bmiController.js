@@ -1,8 +1,18 @@
-// Import các hàm calculateBMI và classifyBMI từ bmi.js
+document.addEventListener('DOMContentLoaded', () => {
+    const bmiForm = document.getElementById('bmiForm');
+    const bmiResult = document.getElementById('bmiResult');
 
-// Hàm getBMI xử lý yêu cầu từ client
-// Trả về JSON chứa bmi và classification
+    bmiForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        
+        const height = parseFloat(document.getElementById('height').value) / 100; // Đổi chiều cao từ cm sang m
+        const weight = parseFloat(document.getElementById('weight').value);
 
-// Xuất hàm getBMI
-
-// Lưu ý: Tham khảo mã trong tệp nameController.js
+        if (height && weight) {
+            const bmi = weight / (height * height);
+            bmiResult.textContent = `Chỉ số BMI của bạn là: ${bmi.toFixed(2)}`;
+        } else {
+            bmiResult.textContent = "Vui lòng nhập chiều cao và cân nặng hợp lệ.";
+        }
+    });
+});
