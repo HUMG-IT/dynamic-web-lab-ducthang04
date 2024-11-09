@@ -67,7 +67,7 @@ Một cấu trúc thư mục tối ưu để dễ dàng mở rộng và bảo tr
   node -v
   npm -v
   ```
-Nếu hiện phiên bản mà không báo lỗi thì đã cài đặt thành công. Lúc này bạn có thể tiến hành các bước tiếp theo.
+Nếu hiện phiên bản mà không báo lỗi thì đã cài đặt thành công. Lúc này bạn có thể tiến hành các bước kế tiếp theo.
 
 2. Khởi tạo dự án và cài đặt các thư viện cần thiết
   ```bash
@@ -323,3 +323,6 @@ Nâng cấp mã của ứng dụng này để cho phép Tính chỉ số BMI tr�
 - Commit và push thay đổi của bạn lên GitHub với message của bạn.
 - Kiểm tra kết quả: Truy cập tab Actions trên GitHub của repository này.
 GitHub Actions sẽ tự động kiểm tra mã của bạn. Nếu kiểm thử thành công, bạn sẽ thấy thông báo "Success".
+- Dương Đức Thắng.
+- MSV 2221050240
+- DYNAMIC_WEB_LAB 
