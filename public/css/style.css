@@ -1,15 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 50px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
 }
 
 form {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 input,
 button {
-    padding: 10px;
-    margin: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+.flex {
+  display: flex;
+}
+.gap-2 {
+  gap: 4px;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.font-bold {
+  font-weight: bold;
+}
+.text-xl {
+  font-size: x-large;
 }

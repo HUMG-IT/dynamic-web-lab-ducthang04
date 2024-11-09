@@ -1,44 +1,38 @@
-/**
- * Module quản lý danh sách chỉ số BMI
- * 
- * Module này lưu trữ danh sách các chỉ số BMI đã tính toán và cung cấp các phương thức để:
- * - Thêm một chỉ số BMI mới vào danh sách.
- * - Lấy danh sách các chỉ số BMI hiện có.
- */
+// Tính chỉ số BMI dựa trên cân nặng và chiều cao, trả về hệ số BMI với 2 số sau dấu phẩy
+// 1. Định nghĩa hàm calculateBMI để tính chỉ số BMI:
+// - Viết một hàm calculateBMI nhận hai tham số là weight (cân nặng, đơn vị kg) và height (chiều cao, đơn vị cm).
+// - Sử dụng công thức tính BMI: BMI = weight / (height / 100)^2.
+// - Đảm bảo kết quả của chỉ số BMI được giới hạn ở hai chữ số thập phân bằng .toFixed(2).
 
-const bmis = []; // Mảng lưu trữ các chỉ số BMI đã tính toán
+// Phân loại theo chỉ số BMI
+// 2. Định nghĩa hàm classifyBMI để phân loại chỉ số BMI:
+// - Viết hàm classifyBMI nhận một tham số là bmi, là kết quả từ hàm calculateBMI.
+// - Sử dụng các điều kiện để phân loại bmi:
+//    - BMI dưới 18.5 là "Gầy".
+//    - BMI từ 18.5 đến 24.9 là "Bình thường".
+//    - BMI từ 25 đến 29.9 là "Thừa cân".
+//    - BMI từ 30 trở lên là "Béo phì".
 
-/**
- * Hàm `addBMI`
- * 
- * Hàm này thêm một chỉ số BMI mới vào danh sách.
- * 
- * @function addBMI
- * @param {number} bmi - Chỉ số BMI cần thêm vào danh sách.
- * @param {string} classification - Phân loại của chỉ số BMI (Gầy, Bình thường, Thừa cân, Béo phì).
- * 
- * @example
- * addBMI(22.5, "Bình thường");
- * // Sau khi thêm, mảng bmis sẽ là [{ bmi: 22.5, classification: "Bình thường" }]
- */
-const addBMI = (bmi, classification) => {
-    bmis.push({ bmi, classification }); // Thêm chỉ số BMI và phân loại vào cuối mảng bmis
+// Xuất các hàm calculateBMI và classifyBMI
+
+function calculateBMI(weight, height) {
+  const BMI = weight / (height / 100) ** 2;
+  return parseFloat(BMI.toFixed(2));
+}
+
+function classifyBMI(bmi) {
+  if (bmi < 18.5) {
+    return "Gầy";
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
+    return "Bình thường";
+  } else if (bmi >= 25 && bmi <= 29.9) {
+    return "Thừa cân";
+  } else if (bmi >= 30) {
+    return "Béo phì";
+  }
+}
+
+module.exports = {
+  calculateBMI,
+  classifyBMI,
 };
-
-/**
- * Hàm `getBMIs`
- * 
- * Hàm này trả về danh sách các chỉ số BMI hiện có.
- * 
- * @function getBMIs
- * @returns {Object[]} - Mảng chứa tất cả các chỉ số BMI và phân loại đã được thêm.
- * 
- * @example
- * getBMIs();
- * // Kết quả: [{ bmi: 22.5, classification: "Bình thường" }, { bmi: 18.4, classification: "Gầy" }]
- */
-const getBMIs = () => {
-    return bmis; // Trả về mảng bmis chứa danh sách các chỉ số BMI
-};
-
-module.exports = { addBMI, getBMIs };
