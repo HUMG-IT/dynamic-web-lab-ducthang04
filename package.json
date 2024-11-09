@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "chromedriver": "^130.0.2",
+    "dynamic_web_lab": "file:",
     "express": "^4.21.1",
     "selenium-webdriver": "^4.26.0"
   },

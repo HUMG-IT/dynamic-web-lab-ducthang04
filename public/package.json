@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "express": "^4.21.1",
+    "public": "file:",
     "selenium-webdriver": "^4.26.0"
   },
   "devDependencies": {
