@@ -325,4 +325,7 @@ Nâng cấp mã của ứng dụng này để cho phép Tính chỉ số BMI tr�
 GitHub Actions sẽ tự động kiểm tra mã của bạn. Nếu kiểm thử thành công, bạn sẽ thấy thông báo "Success".
 - Dương Đức Thắng.
 - MSV 2221050240
-- DYNAMIC_WEB_LAB 
+- DYNAMIC_WEB_LAB
+
+---
+revised
